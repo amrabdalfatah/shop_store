@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_store/utils/images_strings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -95,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Image.asset(women8),
             const Text(
               'You have pushed the button this many times:',
             ),
