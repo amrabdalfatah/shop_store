@@ -3,27 +3,32 @@ import 'package:shop_store/utils/categ_list.dart';
 import 'package:shop_store/utils/images_strings.dart';
 import 'package:shop_store/widgets/categ_widgets.dart';
 
-List<String> menImages = const [
-  men0,
-  men1,
-  men2,
-  men3,
-  men4,
-  men5,
-  men6,
-  men7,
-  men8,
+List<String> electronicsImages = const [
+  electronics0,
+  electronics1,
+  electronics2,
+  electronics3,
+  electronics4,
+  electronics5,
+  electronics6,
+  electronics7,
+  electronics8,
+  electronics9,
+  electronics10,
+  electronics11,
+  electronics12,
+  electronics13,
 ];
 
-class MenCategory extends StatelessWidget {
-  const MenCategory({Key? key}) : super(key: key);
+class ElectronicsCategory extends StatelessWidget {
+  const ElectronicsCategory({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CategHeader(categHeader: 'Men'),
+        const CategHeader(categHeader: 'Electronics'),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.7,
           child: GridView.count(
@@ -31,12 +36,12 @@ class MenCategory extends StatelessWidget {
             crossAxisSpacing: 15,
             mainAxisSpacing: 15,
             children: List.generate(
-              menImages.length,
+              electronicsImages.length,
               (index) {
                 return CategContent(
-                  mainCateg: 'men',
-                  subCateg: men[index],
-                  assetName: menImages[index],
+                  mainCateg: 'electronics',
+                  subCateg: electronics[index],
+                  assetName: electronicsImages[index],
                 );
               },
             ),

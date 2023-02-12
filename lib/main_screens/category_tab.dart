@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:shop_store/categories/accessories_category.dart';
+import 'package:shop_store/categories/bags_category.dart';
+import 'package:shop_store/categories/beauty_category.dart';
+import 'package:shop_store/categories/electronics_category.dart';
+import 'package:shop_store/categories/home_category.dart';
+import 'package:shop_store/categories/kids_category.dart';
 import 'package:shop_store/categories/men_category.dart';
+import 'package:shop_store/categories/shoes_category.dart';
+import 'package:shop_store/categories/women_category.dart';
 import 'package:shop_store/widgets/fake_search.dart';
 
 class CategoryTab extends StatefulWidget {
@@ -99,14 +107,14 @@ class _CategoryTabState extends State<CategoryTab> {
         },
         children: const [
           MenCategory(),
-          Center(child: Text('Women Category')),
-          Center(child: Text('Electronics Category')),
-          Center(child: Text('Accessories Category')),
-          Center(child: Text('Shoes Category')),
-          Center(child: Text('Home & Garden Category')),
-          Center(child: Text('Beauty Category')),
-          Center(child: Text('Kids Category')),
-          Center(child: Text('Bags Category')),
+          WomenCategory(),
+          ElectronicsCategory(),
+          AccessoriesCategory(),
+          ShoesCategory(),
+          HomeCategory(),
+          BeautyCategory(),
+          KidsCategory(),
+          BagsCategory(),
         ],
       ),
     );

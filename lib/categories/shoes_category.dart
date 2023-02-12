@@ -3,27 +3,32 @@ import 'package:shop_store/utils/categ_list.dart';
 import 'package:shop_store/utils/images_strings.dart';
 import 'package:shop_store/widgets/categ_widgets.dart';
 
-List<String> menImages = const [
-  men0,
-  men1,
-  men2,
-  men3,
-  men4,
-  men5,
-  men6,
-  men7,
-  men8,
+List<String> shoesImages = const [
+  shoes0,
+  shoes1,
+  shoes2,
+  shoes3,
+  shoes4,
+  shoes5,
+  shoes6,
+  shoes7,
+  shoes8,
+  shoes9,
+  shoes10,
+  shoes11,
+  shoes12,
+  shoes13,
 ];
 
-class MenCategory extends StatelessWidget {
-  const MenCategory({Key? key}) : super(key: key);
+class ShoesCategory extends StatelessWidget {
+  const ShoesCategory({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CategHeader(categHeader: 'Men'),
+        const CategHeader(categHeader: 'Shoes'),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.7,
           child: GridView.count(
@@ -31,12 +36,12 @@ class MenCategory extends StatelessWidget {
             crossAxisSpacing: 15,
             mainAxisSpacing: 15,
             children: List.generate(
-              menImages.length,
+              shoesImages.length,
               (index) {
                 return CategContent(
-                  mainCateg: 'men',
-                  subCateg: men[index],
-                  assetName: menImages[index],
+                  mainCateg: 'shoes',
+                  subCateg: shoes[index],
+                  assetName: shoesImages[index],
                 );
               },
             ),
