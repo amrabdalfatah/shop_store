@@ -9,6 +9,19 @@ class CategoryTab extends StatefulWidget {
 }
 
 class _CategoryTabState extends State<CategoryTab> {
+  final PageController _pageController = PageController();
+
+  @override
+  void initState() {
+    for (var element in items) {
+      element.isSelected = false;
+    }
+    setState(() {
+      items[0].isSelected = true;
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -44,12 +57,7 @@ class _CategoryTabState extends State<CategoryTab> {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              for (var element in items) {
-                element.isSelected = false;
-              }
-              setState(() {
-                items[index].isSelected = true;
-              });
+              _pageController.jumpToPage(index);
             },
             child: Container(
               height: size.height * 0.15,
@@ -77,6 +85,29 @@ class _CategoryTabState extends State<CategoryTab> {
       height: size.height * 0.8,
       width: size.width * 0.8,
       color: Colors.white,
+      child: PageView(
+        controller: _pageController,
+        scrollDirection: Axis.vertical,
+        onPageChanged: (value) {
+          for (var element in items) {
+            element.isSelected = false;
+          }
+          setState(() {
+            items[value].isSelected = true;
+          });
+        },
+        children: const [
+          Center(child: Text('Men Category')),
+          Center(child: Text('Women Category')),
+          Center(child: Text('Electronics Category')),
+          Center(child: Text('Accessories Category')),
+          Center(child: Text('Shoes Category')),
+          Center(child: Text('Home & Garden Category')),
+          Center(child: Text('Beauty Category')),
+          Center(child: Text('Kids Category')),
+          Center(child: Text('Bags Category')),
+        ],
+      ),
     );
   }
 }
