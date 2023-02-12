@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_store/minor_screens/subcateg_screen.dart';
 import 'package:shop_store/utils/categ_list.dart';
 import 'package:shop_store/utils/images_strings.dart';
 
@@ -35,15 +36,28 @@ class MenCategory extends StatelessWidget {
             children: List.generate(
               menImages.length,
               (index) {
-                return Column(
-                  children: [
-                    SizedBox(
-                      height: 70,
-                      width: 70,
-                      child: Image.asset(menImages[index]),
-                    ),
-                    Text(men[index]),
-                  ],
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return SubCategScreen(
+                          subcategName: men[index],
+                          maincategName: 'men',
+                        );
+                      }),
+                    );
+                  },
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 70,
+                        width: 70,
+                        child: Image.asset(menImages[index]),
+                      ),
+                      Text(men[index]),
+                    ],
+                  ),
                 );
               },
             ),
