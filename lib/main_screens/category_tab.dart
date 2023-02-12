@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_store/categories/men_category.dart';
 import 'package:shop_store/widgets/fake_search.dart';
 
 class CategoryTab extends StatefulWidget {
@@ -97,7 +98,7 @@ class _CategoryTabState extends State<CategoryTab> {
           });
         },
         children: const [
-          Center(child: Text('Men Category')),
+          MenCategory(),
           Center(child: Text('Women Category')),
           Center(child: Text('Electronics Category')),
           Center(child: Text('Accessories Category')),
