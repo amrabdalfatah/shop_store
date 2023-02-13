@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_store/main_screens/cart_tab.dart';
 import 'package:shop_store/main_screens/category_tab.dart';
 import 'package:shop_store/main_screens/home_tab.dart';
+import 'package:shop_store/main_screens/profile_tab.dart';
 import 'package:shop_store/main_screens/stores_tab.dart';
 
 class CustomerHomeScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
     CategoryTab(),
     StoresTab(),
     CartTab(),
-    Center(child: Text('Profile Tap')),
+    ProfileTab(),
   ];
 
   @override
