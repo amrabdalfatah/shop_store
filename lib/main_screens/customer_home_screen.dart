@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_store/main_screens/cart_tab.dart';
 import 'package:shop_store/main_screens/category_tab.dart';
 import 'package:shop_store/main_screens/home_tab.dart';
 import 'package:shop_store/main_screens/stores_tab.dart';
@@ -17,7 +18,7 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
     HomeTab(),
     CategoryTab(),
     StoresTab(),
-    Center(child: Text('Cart Tap')),
+    CartTab(),
     Center(child: Text('Profile Tap')),
   ];
 
